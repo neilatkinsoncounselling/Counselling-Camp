@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us, Counselling Camp</title>
+  <meta name="description" content="Learn about Counselling Camp, who we are, how we came together, and the values that guide everything we do as a collective of NCPS-registered counsellors in Northeast England.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.counsellingcamp.co.uk/about.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://www.counsellingcamp.co.uk/about.html">
+  <meta property="og:title"       content="About Us, Counselling Camp">
+  <meta property="og:description" content="A collective of NCPS-registered counsellors in Northeast England, built on warmth, confidentiality, and a genuine commitment to your wellbeing.">
+  <meta property="og:image"       content="https://www.counsellingcamp.co.uk/img/og-image.png">
+  <meta property="og:locale"      content="en_GB">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/favicon-180.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#5c4a3a">
+
+  <link rel="stylesheet" href="css/styles.min.css">
+
+  <style>
+    /* ── About page specific styles ── */
+    .about-hero {
+      padding: 9rem 2rem 5rem;
+      text-align: center;
+      background: var(--colour-warm-off);
+      border-bottom: 1px solid rgba(158,136,114,0.15);
+    }
+    .about-hero__eyebrow {
+      display: flex; align-items: center; justify-content: center; gap: 0.7rem;
+      font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--colour-taupe); margin-bottom: 0.9rem;
+    }
+    .about-hero__eyebrow::before,
+    .about-hero__eyebrow::after {
+      content: ''; display: block;
+      width: 2rem; height: 1px; background: var(--colour-sand);
+    }
+    .about-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 5.5vw, 4rem);
+      font-weight: 400; color: var(--colour-brown);
+      line-height: 1.08; margin-bottom: 1.6rem;
+    }
+    .about-hero__title em { font-style: italic; color: var(--colour-taupe); }
+    .about-hero__intro {
+      font-size: 1.05rem; font-weight: 300; color: var(--colour-subtext);
+      line-height: 1.85; max-width: 640px; margin: 0 auto;
+    }
+
+    /* ── Story section ── */
+    .about-story {
+      max-width: 760px; margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+    .about-story__eyebrow {
+      font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--colour-taupe); margin-bottom: 0.6rem;
+    }
+    .about-story__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+      font-weight: 400; color: var(--colour-brown);
+      line-height: 1.15; margin-bottom: 2rem;
+    }
+    .about-story__title em { font-style: italic; color: var(--colour-taupe); }
+    .about-story p {
+      font-size: 0.97rem; font-weight: 300;
+      color: var(--colour-subtext); line-height: 1.9;
+      margin-bottom: 1.4rem;
+    }
+    .about-story p:last-child { margin-bottom: 0; }
+
+    /* ── Values section ── */
+    .about-values {
+      background: var(--colour-warm-off);
+      padding: 5rem 2rem;
+      border-top: 1px solid rgba(158,136,114,0.15);
+      border-bottom: 1px solid rgba(158,136,114,0.15);
+    }
+    .about-values__header {
+      text-align: center; margin-bottom: 3.5rem;
+    }
+    .about-values__eyebrow {
+      display: flex; align-items: center; justify-content: center; gap: 0.7rem;
+      font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--colour-taupe); margin-bottom: 0.6rem;
+    }
+    .about-values__eyebrow::before,
+    .about-values__eyebrow::after {
+      content: ''; display: block;
+      width: 2rem; height: 1px; background: var(--colour-sand);
+    }
+    .about-values__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+      font-weight: 400; color: var(--colour-brown); line-height: 1.15;
+    }
+    .about-values__title em { font-style: italic; color: var(--colour-taupe); }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1000px; margin: 0 auto;
+    }
+    @media (max-width: 860px) { .values-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 540px) { .values-grid { grid-template-columns: 1fr; } }
+
+    .value-card {
+      background: #fff;
+      border: 1px solid rgba(158,136,114,0.15);
+      border-radius: 1.2rem;
+      padding: 2rem 1.8rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(92,74,58,0.08);
+    }
+    .value-card__icon {
+      font-size: 1.8rem; margin-bottom: 1rem;
+      display: block;
+    }
+    .value-card__title {
+      font-family: var(--font-display);
+      font-size: 1.2rem; font-weight: 500;
+      color: var(--colour-brown); margin-bottom: 0.5rem;
+    }
+    .value-card__desc {
+      font-size: 0.87rem; font-weight: 300;
+      color: var(--colour-subtext); line-height: 1.75;
+    }
+
+    /* ── Accreditation ── */
+    .about-accreditation {
+      max-width: 760px; margin: 0 auto;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .about-accreditation__eyebrow {
+      display: flex; align-items: center; justify-content: center; gap: 0.7rem;
+      font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--colour-taupe); margin-bottom: 0.6rem;
+    }
+    .about-accreditation__eyebrow::before,
+    .about-accreditation__eyebrow::after {
+      content: ''; display: block;
+      width: 2rem; height: 1px; background: var(--colour-sand);
+    }
+    .about-accreditation__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+      font-weight: 400; color: var(--colour-brown);
+      line-height: 1.15; margin-bottom: 1.5rem;
+    }
+    .about-accreditation__title em { font-style: italic; color: var(--colour-taupe); }
+    .about-accreditation__body {
+      font-size: 0.97rem; font-weight: 300;
+      color: var(--colour-subtext); line-height: 1.9;
+      margin-bottom: 1.8rem;
+    }
+    .about-accreditation__link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--colour-taupe); text-decoration: none;
+      border-bottom: 1px solid rgba(158,136,114,0.4);
+      padding-bottom: 0.1rem;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .about-accreditation__link:hover { color: var(--colour-brown); border-color: var(--colour-brown); }
+
+    /* ── CTA ── */
+    .about-cta {
+      background: var(--colour-brown);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .about-cta__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400; color: var(--colour-cream);
+      line-height: 1.15; margin-bottom: 1rem;
+    }
+    .about-cta__title em { font-style: italic; color: var(--colour-sand); }
+    .about-cta__body {
+      font-size: 0.97rem; font-weight: 300;
+      color: rgba(247,244,239,0.75);
+      line-height: 1.85; max-width: 480px;
+      margin: 0 auto 2.2rem;
+    }
+    .about-cta__buttons {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    }
+    .about-cta .btn--outline {
+      border-color: rgba(201,185,154,0.5);
+      color: var(--colour-sand);
+    }
+    .about-cta .btn--outline:hover {
+      border-color: var(--colour-sand);
+      color: var(--colour-cream);
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header role="banner">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/" class="nav__logo" aria-label="Counselling Camp, home">
+        <img src="img/logo.webp" alt="Counselling Camp" class="nav__logo-img" width="110" height="85" fetchpriority="high">
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#team">Our Team</a></li>
+        <li><a href="about.html" aria-current="page">About Us</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="crisis.html">Crisis Support</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="index.html#booking-heading" class="nav__cta">Book a Session</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+             stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
+          <line x1="2" y1="5.5"  x2="20" y2="5.5"/>
+          <line x1="2" y1="11"   x2="20" y2="11"/>
+          <line x1="2" y1="16.5" x2="20" y2="16.5"/>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero -->
+    <div class="about-hero" id="about-hero"></div>
+
+    <!-- Story -->
+    <div class="about-story reveal" id="about-story"></div>
+
+    <!-- Values -->
+    <div class="about-values">
+      <div class="about-values__header reveal" id="about-values-header"></div>
+      <div class="values-grid" id="about-values-grid"></div>
+    </div>
+
+    <!-- Accreditation -->
+    <div class="about-accreditation reveal" id="about-accreditation"></div>
+
+    <!-- CTA -->
+    <div class="about-cta" id="about-cta"></div>
+
+  </main>
+
+  <!-- Footer (consistent with rest of site) -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__brand-name">Counselling Camp</p>
+        <p class="footer__brand-region">Northeast England</p>
+        <p class="footer__tagline">A collective of qualified, compassionate counsellors offering a safe, confidential space for growth and healing.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Services">
+        <p class="footer__col-title">Services</p>
+        <ul role="list">
+          <li><a href="index.html#services">Individual Therapy</a></li>
+          <li><a href="index.html#services">Men's Mental Health</a></li>
+          <li><a href="index.html#services">Neurodivergent Support</a></li>
+          <li><a href="index.html#services">Online Sessions</a></li>
+          <li><a href="index.html#services">Anxiety &amp; Stress</a></li>
+          <li><a href="index.html#services">Grief &amp; Loss</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Information">
+        <p class="footer__col-title">Information</p>
+        <ul role="list">
+          <li><a href="about.html" aria-current="page">About Us</a></li>
+          <li><a href="index.html#approach">Our Approach</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="crisis.html">Crisis Support</a></li>
+          <li><a href="privacy.html">Privacy &amp; Confidentiality</a></li>
+          <li><a href="privacy.html#cookies">Cookie Policy</a></li>
+          <li><a href="https://ncps.com/about-us/code-of-ethics/" target="_blank" rel="noopener noreferrer">NCPS Ethical Framework</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">
+        <small>&copy; <span id="current-year">2026</span> Counselling Camp. All rights reserved.</small>
+      </p>
+    </div>
+  </footer>
+
+  <script src="content/about.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    /* ── Render hero ── */
+    document.getElementById('about-hero').innerHTML = `
+      <p class="about-hero__eyebrow">${ABOUT.hero.eyebrow}</p>
+      <h1 class="about-hero__title">${ABOUT.hero.title}</h1>
+      <p class="about-hero__intro">${ABOUT.hero.intro}</p>
+    `;
+
+    /* ── Render story ── */
+    document.getElementById('about-story').innerHTML = `
+      <p class="about-story__eyebrow">${ABOUT.story.eyebrow}</p>
+      <h2 class="about-story__title">${ABOUT.story.title}</h2>
+      ${ABOUT.story.paragraphs.map(p => `<p>${p}</p>`).join('')}
+    `;
+
+    /* ── Render values header ── */
+    document.getElementById('about-values-header').innerHTML = `
+      <p class="about-values__eyebrow">${ABOUT.values.eyebrow}</p>
+      <h2 class="about-values__title">${ABOUT.values.title}</h2>
+    `;
+
+    /* ── Render value cards ── */
+    document.getElementById('about-values-grid').innerHTML =
+      ABOUT.values.items.map(v => `
+        <div class="value-card reveal">
+          <span class="value-card__icon" aria-hidden="true">${v.icon}</span>
+          <h3 class="value-card__title">${v.title}</h3>
+          <p class="value-card__desc">${v.desc}</p>
+        </div>
+      `).join('');
+
+    /* ── Render accreditation ── */
+    document.getElementById('about-accreditation').innerHTML = `
+      <p class="about-accreditation__eyebrow">${ABOUT.accreditation.eyebrow}</p>
+      <h2 class="about-accreditation__title">${ABOUT.accreditation.title}</h2>
+      <p class="about-accreditation__body">${ABOUT.accreditation.body}</p>
+      <a href="${ABOUT.accreditation.linkHref}" class="about-accreditation__link"
+         target="_blank" rel="noopener noreferrer">
+        ${ABOUT.accreditation.linkText}
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 7h10M8 4l4 3-4 3"/></svg>
+      </a>
+    `;
+
+    /* ── Render CTA ── */
+    document.getElementById('about-cta').innerHTML = `
+      <h2 class="about-cta__title">${ABOUT.cta.title}</h2>
+      <p class="about-cta__body">${ABOUT.cta.body}</p>
+      <div class="about-cta__buttons">
+        <a href="${ABOUT.cta.primaryHref}" class="btn btn--outline">${ABOUT.cta.primaryText}</a>
+        <a href="${ABOUT.cta.secondaryHref}" class="btn btn--outline">${ABOUT.cta.secondaryText}</a>
+      </div>
+    `;
+
+    /* Re-trigger scroll reveal for dynamically rendered cards */
+    if (typeof initScrollReveal === 'function') {
+      initScrollReveal();
+    } else {
+      /* Fallback: run reveal inline if main.js already ran */
+      const revealEls = document.querySelectorAll('.reveal');
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const siblings = [...entry.target.parentElement.querySelectorAll('.reveal')];
+          const idx = siblings.indexOf(entry.target);
+          entry.target.style.transitionDelay = idx * 0.1 + 's';
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach(el => obs.observe(el));
+    }
+  </script>
+
+</body>
+</html>

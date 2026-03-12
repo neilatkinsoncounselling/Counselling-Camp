@@ -1,0 +1,21 @@
+{
+  "name": "Counselling Camp",
+  "short_name": "Counselling Camp",
+  "description": "Compassionate, confidential counselling in Northeast England and online.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f7f4ef",
+  "theme_color": "#5c4a3a",
+  "icons": [
+    {
+      "src": "/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
