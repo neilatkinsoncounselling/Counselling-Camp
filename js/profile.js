@@ -85,7 +85,7 @@ function populateProfile(){
  
  const formTo=document.getElementById('form-to');
  const formCounsellor=document.getElementById('form-counsellor');
- if(formTo)formTo.value=person.email||'hello@counsellingcamp.co.uk';
+ if(formTo)formTo.value=person.email||'';
  if(formCounsellor)formCounsellor.value=person.name;
  
  const submitBtn=document.getElementById('form-submit');

@@ -89,27 +89,13 @@ function buildTeamCards(){
  if(!grid)return;
  grid.innerHTML=TEAM.map((person)=>{
  const avatar=person.photo
- ? `<a href="team/${person.slug}.html" tabindex="-1" aria-hidden="true">
-<img class="team-card__photo" src="${person.photo}" alt="Photo of ${person.name}" width="340" height="200" loading="lazy" style="object-position:${person.photoPosition||'center 20%'}">
-</a>`
-:`<div class="team-card__avatar" aria-hidden="true">${person.emoji}</div>`;
- const specialisms=person.specialisms&&person.specialisms.length
- ? `<ul class="team-card__specialisms" aria-label="Specialisms" role="list">
- ${person.specialisms.map(s=>`<li class="team-card__specialism">${s}</li>`).join('')}
-</ul>`
-:'';
- const links=buildLinks(person);
+ ? `<div class="team-card__photo-wrap"><a href="team/${person.slug}.html" tabindex="-1" aria-hidden="true"><img class="team-card__photo" src="${person.photo}" alt="Photo of ${person.name}" width="340" height="200" loading="lazy" style="object-position:${person.photoPosition||'center 20%'}"></a></div>`
+ :`<div class="team-card__avatar" aria-hidden="true">${person.emoji}</div>`;
  return `
 <li class="team-card reveal">
  ${avatar}
 <div class="team-card__body">
-<h3 class="team-card__name">
-<a href="team/${person.slug}.html" class="team-card__name-link">${person.name}</a>
-</h3>
-<p class="team-card__role">${person.role}</p>
-<p class="team-card__bio">${person.bio}</p>
- ${specialisms}
- ${links}
+<h3 class="team-card__name"><a href="team/${person.slug}.html" class="team-card__name-link">${person.name}</a></h3>
 <a href="team/${person.slug}.html" class="team-card__profile-link">
  View full profile
 <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M2 7h10M8 4l4 3-4 3"/></svg>
@@ -118,49 +104,6 @@ function buildTeamCards(){
 </li>
  `;
 }).join('');
-}
-function buildLinks(person){
- const links=[];
- if(person.website){
- links.push(`
-<a href="${person.website}" class="team-card__link team-card__link--website"
- target="_blank" rel="noopener noreferrer">
-<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
-<circle cx="12" cy="12" r="10"/>
-<line x1="2" y1="12" x2="22" y2="12"/>
-<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-</svg>
- Visit website
-</a>
- `);
-}
- if(person.booking){
- links.push(`
-<a href="${person.booking}" class="team-card__link team-card__link--booking"
- target="_blank" rel="noopener noreferrer">
-<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
-<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-<line x1="16" y1="2" x2="16" y2="6"/>
-<line x1="8" y1="2" x2="8" y2="6"/>
-<line x1="3" y1="10" x2="21" y2="10"/>
-</svg>
- Book with ${person.name.split(' ')[0]}
-</a>
- `);
-}
- if(person.email){
- links.push(`
-<a href="mailto:${person.email}" class="team-card__link team-card__link--email">
-<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
-<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-<polyline points="22,6 12,13 2,6"/>
-</svg>
- Email ${person.name.split(' ')[0]}
-</a>
- `);
-}
- if(!links.length)return '';
- return `<div class="team-card__links">${links.join('')}</div>`;
 }
 function updateCounsellorCount(){
  const el=document.getElementById('counsellor-count');

@@ -1,23 +1,16 @@
 const TESTIMONIALS=[
 {
- quote:"Coming to Counselling Camp was one of the best decisions I've made. I finally feel like I have the tools to manage my anxiety rather than letting it control me.",
- initial:'A',
+ quote:"I always felt safe, respected, and understood. Your ability to find a balance between being professional and caring made it easy for me to open up, grow and ultimately be my true self. I would definitely recommend counselling to anyone and everyone.",
+ initial:'S',
  name:'Anonymous',
- detail:'Individual Therapy Client',
+ detail:'Online Client of Neil Atkinson',
  stars:5,
 },
 {
- quote:"My counsellor listened without judgement and helped me understand things about myself I had buried for years. I feel lighter and more hopeful than I have in a long time.",
- initial:'M',
+ quote:"Thank you for being an amazing counsellor.  You've helped change the way I see the world and myself. Thanks Again",
+ initial:'T',
  name:'Anonymous',
- detail:'Grief Counselling Client',
- stars:5,
-},
-{
- quote:"The online sessions fit perfectly into my schedule and were every bit as effective as I hoped. Warm,professional,and genuinely life-changing.",
- initial:'R',
- name:'Anonymous',
- detail:'Online Session Client',
+ detail:'Face-to-face Client of Claire Jefferson',
  stars:5,
 },
 ];
