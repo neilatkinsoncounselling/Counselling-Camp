@@ -3,58 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — Counselling Camp</title>
+  <title>Counselling Articles | Mental Health &amp; Wellbeing | Counselling Camp</title>
   <meta name="description" content="Insights, guidance, and perspectives on mental health and wellbeing from the Counselling Camp team.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.counsellingcamp.co.uk/blog/">
   <link rel="stylesheet" href="../css/styles.min.css">
+  <link rel="stylesheet" href="../css/print.css" media="print">
+<style>
+.blog-archive{background:var(--colour-warm-off)}
+.blog-archive__inner{max-width:760px;margin:0 auto;padding:0 2rem 4rem}
+.blog-archive__heading{font-family:var(--font-display);font-size:1.6rem;font-weight:400;color:var(--colour-brown);margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(158,136,114,0.2)}
+.blog-archive__list{list-style:none;display:flex;flex-direction:column}
+.blog-archive__item{border-bottom:1px solid rgba(158,136,114,0.1)}
+.blog-archive__item:last-child{border-bottom:none}
+.blog-archive__band{width:4px;height:2.2rem;border-radius:2px;flex-shrink:0}.blog-archive__link{display:flex;align-items:center;gap:1rem;padding:0.9rem 0;text-decoration:none;transition:color 0.2s}
+.blog-archive__link:hover{color:var(--colour-taupe)}
+.blog-archive__title{font-size:0.95rem;font-weight:400;color:var(--colour-text);flex:1}
+.blog-archive__meta{font-size:0.78rem;font-weight:300;color:var(--colour-subtext);white-space:nowrap}
+.blog-archive__arrow{flex-shrink:0;stroke:var(--colour-taupe)}
+</style>
   <link rel="icon" href="../favicon.ico" sizes="any">
   <link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="../img/favicon-180.png">
   <link rel="manifest" href="../site.webmanifest">
 </head>
 <body>
-
-  <header role="banner">
-    <nav class="nav" aria-label="Main navigation">
-      <a href="../index.html" class="nav__logo" aria-label="Counselling Camp — home">
-        <img src="../img/logo.webp" alt="Counselling Camp" class="nav__logo-img" width="130" height="100" fetchpriority="high">
-      </a>
-      <ul class="nav__links" role="list">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../index.html#services">Services</a></li>
-        <li><a href="../index.html#team">Our Team</a></li>
-        <li><a href="../about.html">About Us</a></li>
-        <li><a href="../blog/index.html" aria-current="page">Blog</a></li>
-        <li><a href="../crisis.html">Crisis Support</a></li>
-        <li><a href="../faqs.html">FAQs</a></li>
-        <li><a href="../index.html#booking-heading" class="nav__cta">Book a Session</a></li>
-      </ul>
-      <button class="nav__toggle" aria-label="Open navigation menu" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-          <line x1="2" y1="5.5"  x2="20" y2="5.5"/>
-          <line x1="2" y1="11"   x2="20" y2="11"/>
-          <line x1="2" y1="16.5" x2="20" y2="16.5"/>
-        </svg>
-      </button>
-    </nav>
-  </header>
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+<header role="banner"><nav class="nav" aria-label="Main navigation"><a href="../index.html" class="nav__logo" aria-label="Counselling Camp — home"><img src="../img/logo.webp" alt="Counselling Camp" class="nav__logo-img" width="150" height="110" fetchpriority="high"></a><ul class="nav__links" role="list"><li><a href="../index.html">Home</a></li><li><a href="../what-we-work-with/">What we help with</a></li><li><a href="../how-we-work/">How we work</a></li><li><a href="../team/">Our Team</a></li><li><a href="../about.html">About Us</a></li><li><a href="../guides/">Guides</a></li><li><a href="../blog/" aria-current="page">Blog</a></li><li><a href="../crisis.html">Crisis Support</a></li><li><a href="../faqs.html">FAQs</a></li><li><a href="../index.html#booking" class="nav__cta">Book a Session</a></li></ul><button class="nav__toggle" aria-label="Open navigation menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><line x1="2" y1="5.5" x2="20" y2="5.5"/><line x1="2" y1="11" x2="20" y2="11"/><line x1="2" y1="16.5" x2="20" y2="16.5"/></svg></button></nav></header>
   <main id="main-content">
 
-    <!-- Hero -->
     <section class="blog-hero">
+      <div class="blog-hero__bg" aria-hidden="true"></div>
+      <div class="blog-hero__overlay" aria-hidden="true"></div>
       <div class="blog-hero__inner">
         <p class="section__eyebrow">From the team</p>
         <h1 class="blog-hero__title">Insights &amp; <em>Perspectives</em></h1>
-        <p class="blog-hero__desc">Thoughts on mental health, wellbeing, and the counselling process — written by our team of qualified counsellors.</p>
+        <p class="blog-hero__desc">Thoughts on mental health, wellbeing, and the counselling process &mdash; written by our team of qualified counsellors.</p>
       </div>
     </section>
 
-    <!-- Post grid -->
     <section class="section blog-listing" aria-labelledby="blog-heading">
       <h2 class="visually-hidden" id="blog-heading">All posts</h2>
       <ul class="blog-grid" id="blog-grid" role="list">
-        <!-- Populated by blog-listing.js -->
+        <li class="blog-card"><a href="what-happens-in-a-first-counselling-session.html" class="blog-card__link" aria-label="Read: What happens in a first counselling session?"><div class="blog-card__tab" style="background:var(--colour-sage)" aria-hidden="true"><h2 class="blog-card__title">What happens in a first counselling session?</h2></div><div class="blog-card__body"><div class="blog-card__pills"><span class="blog-card__tag">counselling</span><span class="blog-card__tag">first-session</span><span class="blog-card__tag">what-to-expect</span><span class="blog-card__tag">anxiety</span><span class="blog-card__tag">getting-started</span></div><p class="blog-card__excerpt">Most people who book a first counselling session have spent longer than they would like to admit thinking about it. Here is what actually happens, and why it is not what most people expect.</p><div class="blog-card__footer"><div class="blog-card__author"><span class="blog-card__author-name">Neil Atkinson</span><time class="blog-card__date" datetime="2026-03-28">28 March 2026</time></div><span class="blog-card__read-more" aria-hidden="true">Read <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 4l4 3-4 3"/></svg></span></div></div></a></li>
+        <li class="blog-card"><a href="three-years-training-as-a-counsellor.html" class="blog-card__link" aria-label="Read: Three years training as a counsellor: what I didn't expect"><div class="blog-card__tab" style="background:var(--colour-slate)" aria-hidden="true"><h2 class="blog-card__title">Three years training as a counsellor: what I didn't expect</h2></div><div class="blog-card__body"><div class="blog-card__pills"><span class="blog-card__tag">training</span><span class="blog-card__tag">personal-growth</span><span class="blog-card__tag">face-to-face</span></div><p class="blog-card__excerpt">I started training to help others. I didn't expect how much it would teach me about myself. Three years on, here's what the journey has been like.</p><div class="blog-card__footer"><div class="blog-card__author"><span class="blog-card__author-name">Neil Atkinson</span><time class="blog-card__date" datetime="2026-02-23">23 February 2026</time></div><span class="blog-card__read-more" aria-hidden="true">Read <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 4l4 3-4 3"/></svg></span></div></div></a></li>
+        <li class="blog-card"><a href="what-is-eft.html" class="blog-card__link" aria-label="Read: What is EFT and why should I give it a go?"><div class="blog-card__tab" style="background:var(--colour-forest)" aria-hidden="true"><h2 class="blog-card__title">What is EFT and why should I give it a go?</h2></div><div class="blog-card__body"><div class="blog-card__pills"><span class="blog-card__tag">eft</span><span class="blog-card__tag">tapping</span><span class="blog-card__tag">mind-body</span><span class="blog-card__tag">anxiety-stress</span></div><p class="blog-card__excerpt">Emotional Freedom Technique, more commonly known as tapping, was introduced by Gary Craig in 1995. Jill Peacock explains what it is and why you should try it.</p><div class="blog-card__footer"><div class="blog-card__author"><span class="blog-card__author-name">Jill Peacock</span><time class="blog-card__date" datetime="2026-03-07">7 March 2026</time></div><span class="blog-card__read-more" aria-hidden="true">Read <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 4l4 3-4 3"/></svg></span></div></div></a></li>
       </ul>
+    </section>
+
+    <section class="section blog-archive" aria-labelledby="archive-heading" style="padding-top:0;">
+      <div class="blog-archive__inner">
+        <h2 class="blog-archive__heading" id="archive-heading">Archive</h2>
+        <ul class="blog-archive__list" role="list">
+        <li class="blog-archive__item"><a href="self-injury-awareness-day.html" class="blog-archive__link"><span class="blog-archive__band" style="background:var(--colour-sage);"></span><span class="blog-archive__title">Understanding self-injury: breaking the silence</span><span class="blog-archive__meta">Neil Atkinson &middot; 1 March 2026</span><svg class="blog-archive__arrow" width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 4l4 3-4 3"/></svg></a></li>
+        </ul>
+      </div>
     </section>
 
   </main>
@@ -66,40 +69,49 @@
         <p class="footer__brand-region">Northeast England</p>
         <p class="footer__tagline">A collective of qualified, compassionate counsellors offering a safe, confidential space for growth and healing.</p>
       </div>
-      <nav class="footer__col" aria-label="Services">
-        <p class="footer__col-title">Services</p>
+      <nav class="footer__col" aria-label="What we help with">
+        <p class="footer__col-title">What we help with</p>
         <ul role="list">
-          <li><a href="../index.html#services">Individual Therapy</a></li>
-          <li><a href="../index.html#services">Men's Mental Health</a></li>
-          <li><a href="../index.html#services">Neurodivergent Support</a></li>
-          <li><a href="../index.html#services">Online Sessions</a></li>
-          <li><a href="../index.html#services">Anxiety &amp; Stress</a></li>
-          <li><a href="../index.html#services">Grief &amp; Loss</a></li>
+          <li><a href="../what-we-work-with/anxiety-stress.html">Anxiety and Stress</a></li>
+          <li><a href="../what-we-work-with/depression.html">Depression</a></li>
+          <li><a href="../what-we-work-with/grief-loss.html">Grief and Loss</a></li>
+          <li><a href="../what-we-work-with/trauma.html">Trauma</a></li>
+          <li><a href="../what-we-work-with/mens-mental-health.html">Men&rsquo;s Mental Health</a></li>
+          <li><a href="../what-we-work-with/neurodivergent-support.html">Neurodivergent Support</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__col" aria-label="How we work">
+        <p class="footer__col-title">How we work</p>
+        <ul role="list">
+          <li><a href="../how-we-work/face-to-face.html">Face-to-Face Counselling</a></li>
+          <li><a href="../how-we-work/online-counselling.html">Online Counselling</a></li>
+          <li><a href="../how-we-work/telephone.html">Telephone Counselling</a></li>
+          <li><a href="../how-we-work/walk-and-talk.html">Walk and Talk Therapy</a></li>
         </ul>
       </nav>
       <nav class="footer__col" aria-label="Information">
         <p class="footer__col-title">Information</p>
         <ul role="list">
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../team/">Our Team</a></li>
           <li><a href="../index.html#approach">Our Approach</a></li>
-          <li><a href="../index.html#team">Our Team</a></li>
           <li><a href="../faqs.html">FAQs</a></li>
-          <li><a href="index.html">Blog</a></li>
+          <li><a href="../guides/">Guides</a></li>
+          <li><a href="../blog/">Blog</a></li>
           <li><a href="../crisis.html">Crisis Support</a></li>
           <li><a href="../privacy.html">Privacy &amp; Confidentiality</a></li>
           <li><a href="../privacy.html#cookies">Cookie Policy</a></li>
           <li><a href="https://ncps.com/about-us/code-of-ethics/" target="_blank" rel="noopener noreferrer">NCPS Ethical Framework</a></li>
         </ul>
       </nav>
-      </div>
+    </div>
     <div class="footer__bottom">
-      <p class="footer__copy"><small>&copy; 2026 Counselling Camp. All rights reserved.</small></p>
+      <p class="footer__copy"><small>&copy; <span id="current-year">2026</span> Counselling Camp. All rights reserved.</small></p>
     </div>
   </footer>
-
-  <script src="../content/team.js"></script>
-  <script src="../content/blog.js"></script>
-  <script src="../js/blog-listing.js"></script>
+  <div class="print-copyright">&copy; counsellingcamp.co.uk</div>
   <script src="../js/main.js"></script>
-
+  <script src="../js/accessibility.js"></script>
+  <script>document.getElementById("current-year").textContent=new Date().getFullYear();</script>
 </body>
 </html>

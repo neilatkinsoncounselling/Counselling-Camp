@@ -1,0 +1,40 @@
+# Netlify redirects — Counselling Camp v59
+
+# Clean URLs
+/blog           /blog/index.html              301
+/guides         /guides/index.html            301
+/what-we-work-with  /what-we-work-with/index.html  301
+/how-we-work    /how-we-work/index.html       301
+/how-we-work/individual-therapy.html    /how-we-work/face-to-face.html    301
+/team           /team/index.html              301
+/about          /about.html                   301
+/faqs           /faqs.html                    301
+/crisis         /crisis.html                  301
+/privacy        /privacy.html                 301
+
+# Legacy /services/ redirects → new locations
+/services                              /what-we-work-with/               301
+/services/index.html                   /what-we-work-with/               301
+/services/anxiety-stress.html          /what-we-work-with/anxiety-stress.html          301
+/services/depression.html              /what-we-work-with/depression.html              301
+/services/grief-loss.html              /what-we-work-with/grief-loss.html              301
+/services/trauma.html                  /what-we-work-with/trauma.html                  301
+/services/mens-mental-health.html      /what-we-work-with/mens-mental-health.html      301
+/services/neurodivergent-support.html  /what-we-work-with/neurodivergent-support.html  301
+/services/individual-therapy.html      /how-we-work/face-to-face.html            301
+/services/online-counselling.html      /how-we-work/online-counselling.html            301
+
+# Team profiles
+/team/neil-atkinson     /team/neil-atkinson.html     301
+/team/stacey-wright     /team/stacey-wright.html     301
+/team/katie-elcoate     /team/katie-elcoate.html     301
+/team/claire-jefferson  /team/claire-jefferson.html  301
+/team/jill-peacock      /team/jill-peacock.html      301
+/team/phil-bancroft     /team/phil-bancroft.html     301
+/team/james-cooper      /team/james-cooper.html      301
+
+# Blog posts
+/guides/what-is-anxiety                      /guides/what-is-anxiety.html                      301
+/blog/what-is-eft                            /blog/what-is-eft.html                            301
+/blog/self-injury-awareness-day              /blog/self-injury-awareness-day.html              301
+/blog/three-years-training-as-a-counsellor   /blog/three-years-training-as-a-counsellor.html   301

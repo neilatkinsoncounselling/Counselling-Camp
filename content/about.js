@@ -32,31 +32,37 @@ const ABOUT = {
     items: [
       {
         icon: '🤝',
+        img:  'img/value-warmth.webp',
         title: 'Genuine warmth',
         desc:  'We believe the relationship between client and counsellor is the foundation of everything. You will always be met with kindness, not clinical distance.',
       },
       {
         icon: '🔒',
-        title: 'Complete confidentiality',
+        img:  'img/value-confidentiality.webp',
+        title: 'Confidentiality',
         desc:  'What you share stays here. We follow the NCPS ethical framework and GDPR to the letter, so you can speak freely.',
       },
       {
         icon: '🌱',
+        img:  'img/value-no-pressure.webp',
         title: 'No pressure, ever',
         desc:  'There is no agenda, no timetable, and no judgement. You move at your own pace, and we follow your lead.',
       },
       {
         icon: '🧭',
+        img:  'img/value-guidance.webp',
         title: 'Honest guidance',
         desc:  'We will be straight with you. If we think a different approach or a different counsellor would serve you better, we will say so.',
       },
       {
         icon: '🌍',
+        img:  'img/value-accessibility.webp',
         title: 'Accessibility',
         desc:  'We offer in-person and online sessions to remove as many barriers to access as possible — geographical, physical, or otherwise.',
       },
       {
         icon: '📚',
+        img:  'img/value-learning.webp',
         title: 'Continued learning',
         desc:  'Every one of our counsellors commits to ongoing training, supervision, and reflective practice. We never stop developing.',
       },

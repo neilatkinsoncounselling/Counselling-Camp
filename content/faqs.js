@@ -34,6 +34,14 @@ const faqs = [
       {
         q: "How regularly should I have counselling?",
         a: "Weekly or fortnightly sessions are most common in counselling practice, particularly at the start of counselling, however, your counsellor can tailor this to fit you and your requirements."
+      },
+      {
+        q: "Can I have sessions online or by phone?",
+        a: "Yes. All of our counsellors offer secure video sessions, and some offer telephone sessions too. Online counselling is just as effective as in-person work for most people, and it means you can access support from wherever feels comfortable and safe."
+      },
+      {
+        q: "What if I need to cancel or reschedule?",
+        a: "Life happens. We ask that you give as much notice as possible, ideally 48 hours, if you need to cancel or move a session. Your counsellor will let you know their cancellation policy when you begin."
       }
     ]
   },
@@ -45,9 +53,52 @@ const faqs = [
         a: "All qualified counsellors should be registered with a professional body e.g. British Association for Counselling and Psychotherapy (BACP), National Counselling & Psychotherapy Society (NCPS), United Kingdom Council for Psychotherapy (UKCP). You can check the official directories of each body to confirm your counsellor is qualified and has signed up to meet the standards and ethical code of that body. All of the counsellors with Counselling Camp are registered with NCPS."
       },
       {
-         q: "What does an integrative counsellor do?",
+        q: "What does an integrative counsellor do?",
         a: "Integrative means that the counsellor has undertaken training in a number of different counselling theories such as CBT, psychodynamic (commonly associated with Sigmund Freud) and transactional analysis. Our counsellors are all integratively trained so they can call upon a variety of theory and tools to help you get the most out of your sessions."
       }
     ]
+  },
+  {
+    category: "Confidentiality",
+    questions: [
+      {
+        q: "Is what I say kept private?",
+        a: "Yes. Everything you share in your sessions is confidential. The only exceptions are where there is a serious risk of harm to you or someone else, in which case your counsellor would always aim to speak with you about this first before taking any action. Our practice follows the NCPS ethical framework and GDPR."
+      },
+      {
+        q: "Do you take notes? Who can see them?",
+        a: "Counsellors may keep brief session notes to help them support you effectively. These are stored securely and are not shared with anyone outside of the counselling relationship. You can ask your counsellor about their notes policy at any time."
+      },
+      {
+        q: "Do you work with a supervisor?",
+        a: "Yes. All of our counsellors receive regular clinical supervision, which is a professional requirement and ensures you receive the best possible care. Supervision is confidential: your counsellor will only ever discuss anonymised details, and your identity is never revealed."
+      }
+    ]
+  },
+  {
+    category: "Neurodivergence & Specialist Areas",
+    questions: [
+      {
+        q: "Do I need a formal diagnosis to access neurodivergent support?",
+        a: "No. We work with people who are formally diagnosed, currently being assessed, or who self-identify as neurodivergent. What matters is your experience, not a piece of paper."
+      },
+      {
+        q: "I'm a man and I've never really talked about my feelings. Is counselling for me?",
+        a: "Yes, and you're not alone in feeling that way. Many men find it hard to ask for help, and we understand why. Our counsellors offer a straightforward, non-judgemental space where you don't have to perform emotions or use language that doesn't feel natural to you. You can show up exactly as you are."
+      }
+    ]
+  },
+  {
+    category: "Practicalities",
+    questions: [
+      {
+        q: "Where are you based?",
+        a: "Our counsellors are based in Northeast England. In-person sessions are available depending on your counsellor. All counsellors offer online sessions, which means you can access support from anywhere in the UK."
+      },
+      {
+        q: "Are you accredited?",
+        a: "All of our counsellors are members of the National Counselling and Psychotherapy Society (NCPS) and work in accordance with their ethical framework. Individual counsellors hold NCPS registered or accredited status, and you can find details on each counsellor's profile page."
+      }
+    ]
   }
-]
+];

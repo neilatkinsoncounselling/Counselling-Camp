@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ─── Primary Meta ───────────────────────────────────────────────── -->
-  <title>Counselling Camp — Find Your Path Forward | Northeast England</title>
+  <title>Counselling Camp | Northeast England Counsellors</title>
   <meta name="description"
-        content="Compassionate, confidential counselling tailored to you. Individual therapy, couples counselling, family therapy and online sessions with NCPS registered counsellors in Northeast England.">
+        content="Compassionate counselling in Northeast England and online. NCPS-registered counsellors offering face-to-face counselling, trauma support, grief counselling and more.">
   <meta name="keywords"
         content="counselling, therapy, counsellor, northeast england, anxiety, grief, couples counselling, family therapy, online therapy, NCPS">
   <meta name="author" content="Counselling Camp">
@@ -18,11 +18,12 @@
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://www.counsellingcamp.co.uk/">
   <meta property="og:site_name"   content="Counselling Camp">
-  <meta property="og:title"       content="Counselling Camp — Find Your Path Forward">
+  <meta property="og:title" content="Counselling Camp Counsellors">
   <meta property="og:description" content="Compassionate, confidential counselling tailored to you. NCPS-registered counsellors offering individual, couples & family therapy in Northeast England and online.">
-  <meta property="og:image"       content="https://www.counsellingcamp.co.uk/img/og-image.png">
-  <meta property="og:image:width"  content="1200">
+  <meta property="og:image" content="https://www.counsellingcamp.co.uk/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:alt"    content="Counselling Camp — Find Your Path Forward">
   <meta property="og:locale"      content="en_GB">
 
@@ -31,7 +32,7 @@
   <meta name="twitter:site"        content="@counsellingcamp">
   <meta name="twitter:title"       content="Counselling Camp — Find Your Path Forward">
   <meta name="twitter:description" content="Compassionate, confidential counselling tailored to you. NCPS-registered counsellors in Northeast England and online.">
-  <meta name="twitter:image"       content="https://www.counsellingcamp.co.uk/img/og-image.png">
+  <meta name="twitter:image"       content="https://www.counsellingcamp.co.uk/img/og-image.jpg">
   <meta name="twitter:image:alt"   content="Counselling Camp logo and tagline">
 
   <!-- ─── Favicons ───────────────────────────────────────────────────── -->
@@ -42,39 +43,315 @@
   <meta name="theme-color"     content="#5c4a3a">
 
   <!-- ─── Structured Data (JSON-LD) ──────────────────────────────────── -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://www.counsellingcamp.co.uk/#organisation",
-    "name": "Counselling Camp",
-    "description": "A collective of qualified, compassionate counsellors offering a safe, confidential space for growth and healing in Northeast England.",
-    "url": "https://www.counsellingcamp.co.uk",
-    "logo": "https://www.counsellingcamp.co.uk/img/logo.png",
-    "image": "https://www.counsellingcamp.co.uk/img/og-image.png",
-    "email": "hello@counsellingcamp.co.uk",
-    "areaServed": [
-      { "@type": "State", "name": "Northeast England" },
-      { "@type": "Country", "name": "United Kingdom" }
-    ],
-    "serviceType": [
-      "Individual Therapy",
-      "Couples Counselling",
-      "Family Therapy",
-      "Online Therapy",
-      "Anxiety and Stress Counselling",
-      "Grief and Loss Counselling"
-    ],
-    "hasCredential": {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "NCPS Registration"
-    },
-    "sameAs": []
-  }
-  </script>
+  
+
+  <!-- ─── Preloads (critical resources) ─────────────────────────────── -->
+  <link rel="preload" href="css/styles.min.css" as="style">
+  <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="preload" href="fonts/jost-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-v21-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-v21-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="img/hero-bg-mobile.webp" as="image" fetchpriority="high">
 
   <!-- ─── Stylesheet ─────────────────────────────────────────────────── -->
-  <link rel="stylesheet" href="css/styles.min.css">
+  
+
+  <!-- ─── Local Business Schema ──────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.counsellingcamp.co.uk/#business",
+  "name": "Counselling Camp",
+  "description": "A collective of qualified, NCPS-registered counsellors offering confidential individual therapy and specialist support in Northeast England and online.",
+  "url": "https://www.counsellingcamp.co.uk",
+  "logo": "https://www.counsellingcamp.co.uk/img/logo.webp",
+  "image": "https://www.counsellingcamp.co.uk/img/og-image.jpg",
+  "email": "",
+  "telephone": "+44-XXXX-XXXXXX",
+  "priceRange": "££",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:00",
+    "closes": "20:00"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Northeast England",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 54.9783,
+    "longitude": -1.6178
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Consett",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "County Durham"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Shotley Bridge",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "County Durham"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Lanchester",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "County Durham"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Stanley",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "County Durham"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Chester-le-Street",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "County Durham"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Durham",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "County Durham"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Newcastle upon Tyne",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Tyne and Wear"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Gateshead",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Tyne and Wear"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Sunderland",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Tyne and Wear"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Washington",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Tyne and Wear"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Blaydon",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Tyne and Wear"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Whickham",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Tyne and Wear"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "South Shields",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "South Tyneside"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Jarrow",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "South Tyneside"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Hebburn",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "South Tyneside"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Boldon",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "South Tyneside"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Whitburn",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "South Tyneside"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Cleadon",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "South Tyneside"
+      }
+    }
+  ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "NCPS Accredited Member"
+  },
+  "employee": [
+    {
+      "@type": "Person",
+      "name": "Neil Atkinson",
+      "jobTitle": "Integrative Counsellor",
+      "url": "https://www.counsellingcamp.co.uk/team/neil-atkinson.html"
+    },
+    {
+      "@type": "Person",
+      "name": "Stacey Wright",
+      "jobTitle": "Integrative Counsellor",
+      "url": "https://www.counsellingcamp.co.uk/team/stacey-wright.html"
+    },
+    {
+      "@type": "Person",
+      "name": "Katie Elcoate",
+      "jobTitle": "Integrative Counsellor",
+      "url": "https://www.counsellingcamp.co.uk/team/katie-elcoate.html"
+    },
+    {
+      "@type": "Person",
+      "name": "Claire Jefferson",
+      "jobTitle": "Integrative Counsellor",
+      "url": "https://www.counsellingcamp.co.uk/team/claire-jefferson.html"
+    },
+    {
+      "@type": "Person",
+      "name": "Jill Peacock",
+      "jobTitle": "Integrative Counsellor",
+      "url": "https://www.counsellingcamp.co.uk/team/jill-peacock.html"
+    },
+    {
+      "@type": "Person",
+      "name": "Phil Bancroft",
+      "jobTitle": "Integrative Counsellor",
+      "url": "https://www.counsellingcamp.co.uk/team/phil-bancroft.html"
+    },
+    {
+      "@type": "Person",
+      "name": "James Cooper",
+      "jobTitle": "Integrative Counsellor",
+      "url": "https://www.counsellingcamp.co.uk/team/james-cooper.html"
+    }
+  ],
+  "sameAs": [],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Counselling Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Face-to-Face Counselling"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Anxiety and Stress Counselling"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Depression Counselling"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Grief and Loss Counselling"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Trauma Counselling"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Men's Mental Health Counselling"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Neurodivergent Support"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Online Counselling"
+        }
+      }
+    ]
+  }
+}
+  </script>
 </head>
 
 <body>
@@ -89,15 +366,16 @@
     <nav class="nav" aria-label="Main navigation">
 
       <a href="/" class="nav__logo" aria-label="Counselling Camp — home">
-        <img src="img/logo.webp" alt="Counselling Camp" class="nav__logo-img" width="110" height="85" fetchpriority="high">
+        <img src="img/logo.webp" alt="Counselling Camp" class="nav__logo-img" width="622" height="457" fetchpriority="high">
       </a>
 
       <ul class="nav__links" role="list">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#approach">Approach</a></li>
-        <li><a href="#team">Our Team</a></li>
+        <li><a href="what-we-work-with/">What we help with</a></li>
+        <li><a href="how-we-work/">How we work</a></li>
+        <li><a href="team/">Our Team</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="guides/">Guides</a></li>
+          <li><a href="blog/">Blog</a></li>
         <li><a href="crisis.html">Crisis Support</a></li>
         <li><a href="faqs.html">FAQs</a></li>
         <li><a href="#booking" class="nav__cta">Book a Session</a></li>
@@ -122,37 +400,38 @@
   <main id="main-content">
 
     <!-- ─── Hero ─────────────────────────────────────────────────────── -->
-    <section class="hero" aria-labelledby="hero-heading">
+    <section class="hero hero--fullbleed" aria-labelledby="hero-heading" style="padding-top: 160px;">
 
-      <div class="hero__content">
-        <p class="hero__eyebrow">Professional Counselling Services</p>
-        <h1 class="hero__title" id="hero-heading">
-          A safe space to <em>heal</em>,<br>
-          grow &amp; find<br>
-          <em>clarity</em>
-        </h1>
-        <p class="hero__subtitle">
+      <!-- Photo backdrop with Ken Burns zoom -->
+      <div class="hero__bg-wrap" aria-hidden="true">
+        <img class="hero__bg"
+             src="img/hero-bg-mobile.webp"
+             srcset="img/hero-bg-mobile.webp 800w, img/hero-bg-desktop.webp 1800w"
+             sizes="100vw"
+             alt="" aria-hidden="true"
+             fetchpriority="high"
+             decoding="sync"
+             width="1800" height="1200">
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content hero__content--centered">
+        <p class="hero__eyebrow hero__eyebrow--light">Professional Counselling Services</p>
+        <h1 class="hero__title hero__title--light" id="hero-heading">A safe space to <em>heal,</em><br>grow &amp; find <em>clarity</em></h1>
+        <p class="hero__subtitle hero__subtitle--light">
           Compassionate, confidential counselling tailored to you.
           Whether you're navigating anxiety, life transitions, grief, or
           relationship challenges — we walk alongside you.
         </p>
-        <div class="hero__actions">
-          <a href="#booking" class="btn btn--primary">Book a Free Consultation</a>
-          <a href="#services" class="btn btn--outline">Explore Services</a>
+        <div class="hero__actions hero__actions--centered">
+          <a href="#booking" class="btn btn--hero-primary">Book a Free First Session</a>
         </div>
       </div>
 
-      <div class="hero__visual">
-        <div class="hero-photo-wrap">
-          <img src="img/two-chairs.webp" alt="Two chairs in a calm counselling room" class="hero-photo-wrap__img" width="1400" height="933" fetchpriority="high" decoding="async">
-          <div class="hero-photo-badge hero-photo-badge--top">
-            <img src="img/logo.webp" alt="Counselling Camp" style="height:28px;width:auto;">
-            <div>
-              <div class="hero-photo-badge__text">Counselling Camp</div>
-              <div class="hero-photo-badge__sub">Est. 2026 · Northeast England</div>
-            </div>
-          </div>
-        </div>
+      <!-- Scroll indicator -->
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-label">Scroll</span>
+        <div class="hero__scroll-line"></div>
       </div>
 
     </section>
@@ -162,7 +441,7 @@
       <div class="stats-band__inner">
 
         <div class="stat">
-          <span class="stat__number" id="counsellor-count">6</span>
+          <span class="stat__number" id="counsellor-count">...</span>
           <span class="stat__label">Qualified Counsellors</span>
         </div>
 
@@ -176,7 +455,7 @@
         <div class="stats-band__divider" aria-hidden="true"></div>
 
         <div class="stat">
-          <span class="stat__number">100%</span>
+          <span class="stat__number" data-target="100" data-suffix="%">100%</span>
           <span class="stat__label">Confidential</span>
         </div>
 
@@ -190,138 +469,78 @@
       </div>
     </div>
 
-    <!-- ─── Services ─────────────────────────────────────────────────── -->
-    <section class="section" id="services" aria-labelledby="services-heading">
+    <!-- ─── What we work with + How we work ──────────────────────────── -->
+    <section class="section section--services-compact" id="services" aria-labelledby="services-heading">
+
       <div class="section__header reveal">
-        <p class="section__eyebrow">What We Offer</p>
-        <h2 class="section__title" id="services-heading">Services designed<br>around <em>you</em></h2>
+        <p class="section__eyebrow">What we help with</p>
+        <h2 class="section__title" id="services-heading">What we <em>help with</em></h2>
+        <p class="section__subtitle">Our counsellors support people with a wide range of challenges. Select an area to find out more.</p>
+      </div>
+      <ul class="svc-cards reveal" role="list">
+        <li><a href="what-we-work-with/anxiety-stress.html" class="svc-card svc-card--mist">
+          <span class="svc-card__name">Anxiety and Stress</span>
+          <span class="svc-card__hook">You do not have to live in survival mode.</span>
+        </a></li>
+        <li><a href="what-we-work-with/depression.html" class="svc-card svc-card--brown">
+          <span class="svc-card__name">Depression</span>
+          <span class="svc-card__hook">You are not broken. Something has shifted.</span>
+        </a></li>
+        <li><a href="what-we-work-with/grief-loss.html" class="svc-card svc-card--blush">
+          <span class="svc-card__name">Grief and Loss</span>
+          <span class="svc-card__hook">Grief has no timetable.</span>
+        </a></li>
+        <li><a href="what-we-work-with/trauma.html" class="svc-card svc-card--taupe">
+          <span class="svc-card__name">Trauma</span>
+          <span class="svc-card__hook">You do not have to carry it alone.</span>
+        </a></li>
+        <li><a href="what-we-work-with/mens-mental-health.html" class="svc-card svc-card--sand">
+          <span class="svc-card__name">Men's Mental Health</span>
+          <span class="svc-card__hook">Asking for help is not a failing.</span>
+        </a></li>
+        <li><a href="what-we-work-with/neurodivergent-support.html" class="svc-card svc-card--sage">
+          <span class="svc-card__name">Neurodivergent Support</span>
+          <span class="svc-card__hook">A space that works for you.</span>
+        </a></li>
+      </ul>
+      <div class="service-pills__cta reveal">
+        <a href="what-we-work-with/" class="btn btn--outline">Browse all areas</a>
       </div>
 
-      <ul class="services-grid" role="list">
-
-        <li class="service-card reveal" data-accent="sage">
-          <a href="#booking" class="service-card__cover-link" aria-label="Book a session — Individual Therapy"></a>
-          <div class="service-card__top">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                <circle cx="12" cy="7" r="4"/>
-              </svg>
-            </div>
-          </div>
-          <h3 class="service-card__title">Individual Therapy</h3>
-          <p class="service-card__hook">"I just need someone to talk to — someone who won't judge me."</p>
-          <p class="service-card__desc">A private, one-to-one space that belongs entirely to you. No agenda, no pressure — just the freedom to say what you've been carrying.</p>
-          <span class="service-card__link" aria-hidden="true">
-            Book a session
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M2 7h10M8 4l4 3-4 3"/></svg>
-          </span>
-        </li>
-
-        <li class="service-card reveal" data-accent="sand">
-          <a href="#booking" class="service-card__cover-link" aria-label="Book a session — Men's Mental Health"></a>
-          <div class="service-card__top">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <circle cx="12" cy="7" r="4"></circle>
-                <path d="M5.5 21a7 7 0 0 1 13 0"></path>
-                <path d="M17 3l3 3-3 3"></path>
-                <line x1="14" y1="6" x2="20" y2="6"></line>
-              </svg>
-            </div>
-          </div>
-          <h3 class="service-card__title">Men's Mental Health</h3>
-          <p class="service-card__hook">"I should be able to handle this on my own."</p>
-          <p class="service-card__desc">You don't have to. Many men find it hard to ask for help — we get that. This is a space where you can speak honestly, without judgement, and without being told how you should feel.</p>
-          <span class="service-card__link" aria-hidden="true">
-            Book a session
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 4l4 3-4 3"/></svg>
-          </span>
-        </li>
-
-        <li class="service-card reveal" data-accent="taupe">
-          <a href="#booking" class="service-card__cover-link" aria-label="Book a session — Neurodivergent Support"></a>
-          <div class="service-card__top">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M9.5 2a2.5 2.5 0 1 1 5 0v.5a2 2 0 0 0 2 2H17a2 2 0 0 1 2 2v.5"></path>
-                <path d="M9 22H5a2 2 0 0 1-2-2v-3a2 2 0 0 0-2-2v-1a2 2 0 0 0 2-2V9a2 2 0 0 1 2-2h3"></path>
-                <path d="M19 11v1a2 2 0 0 0 2 2v1a2 2 0 0 0-2 2v3a2 2 0 0 1-2 2h-3"></path>
-              </svg>
-            </div>
-          </div>
-          <h3 class="service-card__title">Neurodivergent Support</h3>
-          <p class="service-card__hook">"Your brain works differently. And finally, someone gets it."</p>
-          <p class="service-card__desc">Whether you're diagnosed or self-identifying, neurodivergence can raise so many questions about who you are and how you move through the world. We'll support you to find your own answers, at your own pace.</p>
-          <span class="service-card__link" aria-hidden="true">
-            Book a session
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 4l4 3-4 3"/></svg>
-          </span>
-        </li>
-
-        <li class="service-card reveal" data-accent="mist">
-          <a href="#booking" class="service-card__cover-link" aria-label="Book a session — Online Sessions"></a>
-          <div class="service-card__top">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
-                <rect x="2" y="3" width="20" height="14" rx="2"/>
-                <path d="M8 21h8M12 17v4"/>
-              </svg>
-            </div>
-          </div>
-          <h3 class="service-card__title">Online Sessions</h3>
-          <p class="service-card__hook">"I want help, but leaving the house right now feels impossible."</p>
-          <p class="service-card__desc">Everything you'd get in person, from wherever feels safe for you. Secure video or phone sessions, flexible around your life.</p>
-          <span class="service-card__link" aria-hidden="true">
-            Book a session
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M2 7h10M8 4l4 3-4 3"/></svg>
-          </span>
-        </li>
-
-        <li class="service-card reveal" data-accent="sage-warm">
-          <a href="#booking" class="service-card__cover-link" aria-label="Book a session — Anxiety &amp; Stress"></a>
-          <div class="service-card__top">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-              </svg>
-            </div>
-          </div>
-          <h3 class="service-card__title">Anxiety &amp; Stress</h3>
-          <p class="service-card__hook">"My mind won't stop. I'm exhausted from worrying about everything."</p>
-          <p class="service-card__desc">You don't have to live in survival mode. We'll help you understand what's driving your anxiety and find real, lasting relief.</p>
-          <span class="service-card__link" aria-hidden="true">
-            Book a session
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M2 7h10M8 4l4 3-4 3"/></svg>
-          </span>
-        </li>
-
-        <li class="service-card reveal" data-accent="blush">
-          <a href="#booking" class="service-card__cover-link" aria-label="Book a session — Grief &amp; Loss"></a>
-          <div class="service-card__top">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-              </svg>
-            </div>
-          </div>
-          <h3 class="service-card__title">Grief &amp; Loss</h3>
-          <p class="service-card__hook">"Everyone expects me to be over it by now. I'm not even close."</p>
-          <p class="service-card__desc">Grief has no timetable. We offer a compassionate, unhurried space to sit with your loss and find your way through it.</p>
-          <span class="service-card__link" aria-hidden="true">
-            Book a session
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M2 7h10M8 4l4 3-4 3"/></svg>
-          </span>
-        </li>
-
+      <div class="section__header reveal" style="margin-top:3.5rem;">
+        <p class="section__eyebrow">How we work</p>
+        <h2 class="section__title">Whatever works<em> for you</em></h2>
+        <p class="section__subtitle">Counselling should fit around your life. Choose a format that suits you.</p>
+      </div>
+      <ul class="svc-cards svc-cards--4 reveal" role="list">
+        <li><a href="how-we-work/face-to-face.html" class="svc-card svc-card--sage">
+          <span class="svc-card__name">Face-to-Face</span>
+          <span class="svc-card__hook">Two people in a room, talking.</span>
+        </a></li>
+        <li><a href="how-we-work/online-counselling.html" class="svc-card svc-card--mist">
+          <span class="svc-card__name">Online Counselling</span>
+          <span class="svc-card__hook">From wherever feels safe.</span>
+        </a></li>
+        <li><a href="how-we-work/walk-and-talk.html" class="svc-card svc-card--sage">
+          <span class="svc-card__name">Walk and Talk</span>
+          <span class="svc-card__hook">Outdoors, side by side.</span>
+        </a></li>
+        <li><a href="how-we-work/telephone.html" class="svc-card svc-card--taupe">
+          <span class="svc-card__name">Telephone</span>
+          <span class="svc-card__hook">Talking. No camera, no screen.</span>
+        </a></li>
       </ul>
+      <div class="service-pills__cta reveal">
+        <a href="how-we-work/" class="btn btn--outline">See how we work</a>
+      </div>
+
     </section>
 
     <!-- ─── Approach ─────────────────────────────────────────────────── -->
     <section class="section section--tinted" id="approach" aria-labelledby="approach-heading">
       <div class="section__header reveal">
-        <p class="section__eyebrow">What to expect</p>
-        <h2 class="section__title" id="approach-heading">How it <em>works</em></h2>
+        <p class="section__eyebrow">Your next steps</p>
+        <h2 class="section__title" id="approach-heading">How it works, <em>step by step</em></h2>
       </div>
 
       <div class="approach__inner">
@@ -330,23 +549,25 @@
           <ol class="approach__steps" aria-label="Our four-step approach">
 
             <li class="approach__step">
-              <span class="step__number" aria-hidden="true">01</span>
+              <span class="step__number" aria-hidden="true">One</span>
               <div>
                 <h3 class="step__title">Choose your counsellor</h3>
                 <p class="step__desc">Browse our team and pick the person you feel most drawn to. Not sure who to choose? All of our counsellors will be happy to have a chat and help you decide.</p>
+                <p class="step__desc" style="margin-top:0.5rem;"><a href="team/index.html" style="color:var(--colour-brown);font-weight:400;">Meet the Team</a></p>
               </div>
             </li>
 
             <li class="approach__step">
-              <span class="step__number" aria-hidden="true">02</span>
+              <span class="step__number" aria-hidden="true">Two</span>
               <div>
                 <h3 class="step__title">Free first session</h3>
                 <p class="step__desc">A no-pressure conversation to talk about what has brought you here. No commitment, no obligation, just a chance to take that first step.</p>
+                <p class="step__desc" style="margin-top:0.5rem;"><a href="blog/what-happens-in-a-first-counselling-session.html" style="color:var(--colour-brown);font-weight:400;">Read what actually happens in a first session.</a></p>
               </div>
             </li>
 
             <li class="approach__step">
-              <span class="step__number" aria-hidden="true">03</span>
+              <span class="step__number" aria-hidden="true">Three</span>
               <div>
                 <h3 class="step__title">Your sessions begin</h3>
                 <p class="step__desc">Regular sessions tailored entirely to you, at a pace and in a format that suits your life, online or in person.</p>
@@ -354,7 +575,7 @@
             </li>
 
             <li class="approach__step">
-              <span class="step__number" aria-hidden="true">04</span>
+              <span class="step__number" aria-hidden="true">Four</span>
               <div>
                 <h3 class="step__title">Ongoing support</h3>
                 <p class="step__desc">Some people come for a few sessions, others for longer. When you're ready to wind down, we'll do that gradually and thoughtfully — so you finish feeling steady, not abandoned.</p>
@@ -365,8 +586,8 @@
         </div>
 
         <div class="approach__illustration reveal">
-          <img src="img/nature-band.webp"
-               alt="A woodland path winding through sunlit trees"
+          <img src="img/approach-path.webp"
+               alt="Stepping stones through a calm zen garden in golden light"
                class="approach__nature-img" loading="lazy">
         </div>
 
@@ -385,22 +606,11 @@
     </section>
 
     <!-- ─── Testimonials ──────────────────────────────────────────────── -->
-    <section class="section section--dark" id="testimonials" aria-labelledby="testimonials-heading">
-      <div class="section__header reveal">
-        <p class="section__eyebrow">Client Voices</p>
-        <h2 class="section__title" id="testimonials-heading">What people<br>are <em>saying</em></h2>
-      </div>
-
-      <ul class="testimonials-grid" role="list">
-        <!-- Testimonials are rendered by js/testimonials.js — edit that file to manage testimonials -->
-      </ul>
-    </section>
-
     <!-- ─── Booking ───────────────────────────────────────────────────── -->
     <section class="section booking" id="booking" aria-labelledby="booking-heading">
       <div class="booking__inner">
         <p class="section__eyebrow reveal" style="justify-content:center;">Get Started</p>
-        <h2 class="section__title reveal" id="booking-heading">Book your free<br><em>consultation</em></h2>
+        <h2 class="section__title reveal" id="booking-heading">Book your free<br><em>first session</em></h2>
         <p class="booking__desc reveal">
           Taking that first step is the hardest part. Choose a counsellor below — or select "No preference" — and we'll be in touch within one working day.
         </p>
@@ -422,16 +632,26 @@
               aria-label="Free consultation booking form">
 
           <input type="hidden" name="form-name" value="free-consultation">
-          <input type="hidden" name="_to" id="booking-form-to" value="hello@counsellingcamp.co.uk">
+          <input type="hidden" name="_to" id="booking-form-to" value="">
           <input type="hidden" name="counsellor" id="booking-form-counsellor" value="No preference">
           <div style="position:absolute;left:-9999px;opacity:0;pointer-events:none;" aria-hidden="true"><label>Leave blank: <input name="bot-field" tabindex="-1" autocomplete="off"></label></div>
 
           <!-- ── Counsellor picker ── -->
           <div class="counsellor-picker" role="group" aria-labelledby="picker-label">
-            <p class="counsellor-picker__label" id="picker-label">Who would you like to speak with?</p>
+            <div class="picker-header">
+              <p class="counsellor-picker__label" id="picker-label">Who would you like to speak with?</p>
+            </div>
             <ul class="counsellor-picker__grid" id="counsellor-picker-grid" role="list">
               <!-- Populated by booking.js from TEAM data -->
             </ul>
+            <div class="picker-arrows">
+              <button class="picker-arrow" id="picker-prev" aria-label="Previous counsellor" type="button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              </button>
+              <button class="picker-arrow" id="picker-next" aria-label="Next counsellor" type="button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
           </div>
 
           <div class="form-grid">
@@ -477,15 +697,15 @@
             </div>
 
             <div class="form-field">
-              <label for="service">I'm interested in</label>
+              <label for="service">What brings you here?</label>
               <select id="service" name="service">
-                <option value="">Select a service…</option>
-                <option value="individual">Individual Therapy</option>
-                <option value="couples">Couples Counselling</option>
-                <option value="family">Family Therapy</option>
-                <option value="online">Online Sessions</option>
-                <option value="anxiety">Anxiety &amp; Stress</option>
-                <option value="grief">Grief &amp; Loss</option>
+                <option value="">Select an area…</option>
+                <option value="anxiety">Anxiety and Stress</option>
+                <option value="depression">Depression</option>
+                <option value="grief">Grief and Loss</option>
+                <option value="trauma">Trauma</option>
+                <option value="mens">Men's Mental Health</option>
+                <option value="neurodivergent">Neurodivergent Support</option>
                 <option value="unsure">Not Sure Yet</option>
               </select>
             </div>
@@ -497,6 +717,7 @@
                 <option value="inperson">In-person (Northeast England)</option>
                 <option value="video">Online (Video Call)</option>
                 <option value="phone">Telephone</option>
+                <option value="walkandtalk">Walk and Talk</option>
                 <option value="nopref">No Preference</option>
               </select>
             </div>
@@ -510,7 +731,7 @@
 
           </div>
 
-          <button type="submit" class="form-submit" id="booking-submit">Request Free Consultation</button>
+          <button type="submit" class="form-submit" id="booking-submit">Request Free First Session</button>
           <p class="form-note">
             <span aria-hidden="true">🔒</span>
             All information is treated in strict confidence in accordance with GDPR.
@@ -519,6 +740,18 @@
 
         </form>
       </div>
+    </section>
+
+    <section class="section section--sage" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="section__header reveal">
+        <p class="section__eyebrow">Client Voices</p>
+        <h2 class="section__title" id="testimonials-heading">What people<br>are <em>saying</em></h2>
+      </div>
+
+      <ul class="testimonials-grid" role="list">
+        <!-- Testimonials are rendered by js/testimonials.js — edit that file to manage testimonials -->
+      </ul>
+      <p style="text-align:center;font-size:0.72rem;font-weight:300;color:var(--colour-taupe);margin-top:2rem;letter-spacing:0.04em;">All testimonials are used with the permission of the client.</p>
     </section>
 
   </main>
@@ -535,15 +768,24 @@
         <p class="footer__tagline">A collective of qualified, compassionate counsellors offering a safe, confidential space for growth and healing.</p>
       </div>
 
-      <nav class="footer__col" aria-label="Services">
-        <p class="footer__col-title">Services</p>
+                  <nav class="footer__col" aria-label="What we help with">
+        <p class="footer__col-title">What we help with</p>
         <ul role="list">
-          <li><a href="#services">Individual Therapy</a></li>
-          <li><a href="#services">Men's Mental Health</a></li>
-          <li><a href="#services">Neurodivergent Support</a></li>
-          <li><a href="#services">Online Sessions</a></li>
-          <li><a href="#services">Anxiety &amp; Stress</a></li>
-          <li><a href="#services">Grief &amp; Loss</a></li>
+          <li><a href="what-we-work-with/anxiety-stress.html">Anxiety and Stress</a></li>
+          <li><a href="what-we-work-with/depression.html">Depression</a></li>
+          <li><a href="what-we-work-with/grief-loss.html">Grief and Loss</a></li>
+          <li><a href="what-we-work-with/trauma.html">Trauma</a></li>
+          <li><a href="what-we-work-with/mens-mental-health.html">Men's Mental Health</a></li>
+          <li><a href="what-we-work-with/neurodivergent-support.html">Neurodivergent Support</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__col" aria-label="How we work">
+        <p class="footer__col-title">How we work</p>
+        <ul role="list">
+          <li><a href="how-we-work/face-to-face.html">Face-to-Face Counselling</a></li>
+          <li><a href="how-we-work/online-counselling.html">Online Counselling</a></li>
+          <li><a href="how-we-work/telephone.html">Telephone Counselling</a></li>
+          <li><a href="how-we-work/walk-and-talk.html">Walk and Talk Therapy</a></li>
         </ul>
       </nav>
 
@@ -551,9 +793,11 @@
         <p class="footer__col-title">Information</p>
         <ul role="list">
           <li><a href="about.html">About Us</a></li>
+          <li><a href="team/">Our Team</a></li>
           <li><a href="#approach">Our Approach</a></li>
           <li><a href="faqs.html">FAQs</a></li>
-          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="guides/">Guides</a></li>
+          <li><a href="blog/">Blog</a></li>
           <li><a href="crisis.html">Crisis Support</a></li>
           <li><a href="privacy.html">Privacy &amp; Confidentiality</a></li>
           <li><a href="privacy.html#cookies">Cookie Policy</a></li>
@@ -570,8 +814,119 @@
     </div>
   </footer>
 
+  <!-- Back to top -->
+  <button class="back-to-top" aria-label="Back to top" id="back-to-top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
   <!-- ─── Scripts ────────────────────────────────────────────────────── -->
   <script src="content/team.js"></script>
+
+  <!-- Team carousel — mobile only -->
+  <script>
+  (function() {
+    function initTeamCarousel() {
+      if (window.innerWidth > 600) return;
+
+      var grid = document.querySelector('.team-grid');
+      if (!grid) return;
+
+      var cards = grid.querySelectorAll('.team-card');
+      var count = cards.length;
+      if (count < 2) return;
+
+      // Skip reveal animations on mobile — mark all cards visible immediately
+      // so IntersectionObserver doesn't animate them mid-swipe
+      cards.forEach(function(c) {
+        c.classList.add('is-visible');
+        c.style.transitionDelay = '0s';
+      });
+
+      // Wrap grid
+      var wrap = document.createElement('div');
+      wrap.className = 'team-carousel-wrap';
+      grid.parentNode.insertBefore(wrap, grid);
+      wrap.appendChild(grid);
+
+      // Arrows
+      var arrowsEl = document.createElement('div');
+      arrowsEl.className = 'team-carousel-arrows';
+      arrowsEl.innerHTML =
+        '<button class="team-carousel-btn team-carousel-btn--prev" aria-label="Previous counsellor">' +
+          '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="11 4 6 9 11 14"/></svg>' +
+        '</button>' +
+        '<button class="team-carousel-btn team-carousel-btn--next" aria-label="Next counsellor">' +
+          '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 4 12 9 7 14"/></svg>' +
+        '</button>';
+      wrap.appendChild(arrowsEl);
+
+      // Dots
+      var dotsEl = document.createElement('div');
+      dotsEl.className = 'team-carousel-dots';
+      dotsEl.setAttribute('aria-hidden', 'true');
+      for (var i = 0; i < count; i++) {
+        var dot = document.createElement('span');
+        dot.className = 'team-carousel-dot' + (i === 0 ? ' is-active' : '');
+        dotsEl.appendChild(dot);
+      }
+      wrap.appendChild(dotsEl);
+
+      var dots = dotsEl.querySelectorAll('.team-carousel-dot');
+      var prevBtn = arrowsEl.querySelector('.team-carousel-btn--prev');
+      var nextBtn = arrowsEl.querySelector('.team-carousel-btn--next');
+
+      // Track index as state — never infer from scroll position mid-animation
+      var currentIdx = 0;
+      var isScrolling = false;
+
+      function cardWidth() {
+        var gap = parseFloat(getComputedStyle(grid).gap) || 16;
+        return cards[0].offsetWidth + gap;
+      }
+
+      function goTo(idx) {
+        if (isScrolling) return;
+        idx = Math.max(0, Math.min(count - 1, idx));
+        currentIdx = idx;
+        isScrolling = true;
+        grid.scrollTo({ left: idx * cardWidth(), behavior: 'smooth' });
+        updateDots();
+        // Release lock after animation (~400ms)
+        setTimeout(function() { isScrolling = false; }, 420);
+      }
+
+      function updateDots() {
+        dots.forEach(function(d, i) {
+          d.classList.toggle('is-active', i === currentIdx);
+        });
+      }
+
+      prevBtn.addEventListener('click', function() { goTo(currentIdx - 1); });
+      nextBtn.addEventListener('click', function() { goTo(currentIdx + 1); });
+
+      // Keep state in sync if user swipes manually
+      var swipeTimer;
+      grid.addEventListener('scroll', function() {
+        if (isScrolling) return;
+        clearTimeout(swipeTimer);
+        swipeTimer = setTimeout(function() {
+          var cw = cardWidth();
+          currentIdx = Math.round(grid.scrollLeft / cw);
+          updateDots();
+        }, 120);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initTeamCarousel);
+    } else {
+      setTimeout(initTeamCarousel, 0);
+    }
+  })();
+  </script>
+
   <script src="js/booking.js"></script>
   <script src="js/testimonials.js"></script>
   <script src="js/main.js"></script>
@@ -581,5 +936,12 @@
     document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
 
+  <script>
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.src = 'js/accessibility.js';
+      document.body.appendChild(s);
+    });
+  </script>
 </body>
 </html>

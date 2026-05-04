@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us, Counselling Camp</title>
+  <title>About Us | Counselling Camp | Northeast England</title>
   <meta name="description" content="Learn about Counselling Camp, who we are, how we came together, and the values that guide everything we do as a collective of NCPS-registered counsellors in Northeast England.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.counsellingcamp.co.uk/about.html">
@@ -11,9 +11,9 @@
   <!-- Open Graph -->
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://www.counsellingcamp.co.uk/about.html">
-  <meta property="og:title"       content="About Us, Counselling Camp">
+  <meta property="og:title" content="About Counselling Camp">
   <meta property="og:description" content="A collective of NCPS-registered counsellors in Northeast England, built on warmth, confidentiality, and a genuine commitment to your wellbeing.">
-  <meta property="og:image"       content="https://www.counsellingcamp.co.uk/img/og-image.png">
+  <meta property="og:image"       content="https://www.counsellingcamp.co.uk/img/og-image.jpg">
   <meta property="og:locale"      content="en_GB">
 
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -25,40 +25,93 @@
   <link rel="stylesheet" href="css/styles.min.css">
 
   <style>
-    /* ── About page specific styles ── */
+    /* ── About hero — full bleed photo (matches homepage) ── */
     .about-hero {
-      padding: 9rem 2rem 5rem;
+      min-height: 55vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      background: var(--colour-warm-off);
-      border-bottom: 1px solid rgba(158,136,114,0.15);
+      position: relative;
+      overflow: hidden;
+      padding: 10rem 2rem 4rem;
     }
+
+    .about-hero__bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('img/hero-bg.webp');
+      background-size: cover;
+      background-position: center 40%;
+      transform: scale(1.04);
+      animation: about-hero-zoom 18s ease-out forwards;
+    }
+
+    @keyframes about-hero-zoom {
+      from { transform: scale(1.04); }
+      to   { transform: scale(1.0); }
+    }
+
+    .about-hero__overlay { position: absolute; inset: 0; background: 
+    linear-gradient(to bottom, transparent 0%, transparent 40%, rgba(10,8,4,0.6) 100%),
+    radial-gradient(ellipse at center, rgba(10,8,4,0.55) 0%, rgba(10,8,4,0.3) 40%, transparent 70%); }
+
+    .about-hero__content { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; }
+
     .about-hero__eyebrow {
-      display: flex; align-items: center; justify-content: center; gap: 0.7rem;
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.7rem;
       font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--colour-taupe); margin-bottom: 0.9rem;
+      color: rgba(255,255,255,0.85); margin-bottom: 1.2rem;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+      opacity: 0;
+      animation: about-fade-up 0.8s 0.3s ease forwards;
     }
     .about-hero__eyebrow::before,
     .about-hero__eyebrow::after {
       content: ''; display: block;
-      width: 2rem; height: 1px; background: var(--colour-sand);
-    }
-    .about-hero__title {
-      font-family: var(--font-display);
-      font-size: clamp(2.6rem, 5.5vw, 4rem);
-      font-weight: 400; color: var(--colour-brown);
-      line-height: 1.08; margin-bottom: 1.6rem;
-    }
-    .about-hero__title em { font-style: italic; color: var(--colour-taupe); }
-    .about-hero__intro {
-      font-size: 1.05rem; font-weight: 300; color: var(--colour-subtext);
-      line-height: 1.85; max-width: 640px; margin: 0 auto;
+      width: 2rem; height: 1px; background: rgba(201,185,154,0.6);
     }
 
-    /* ── Story section ── */
-    .about-story {
-      max-width: 760px; margin: 0 auto;
-      padding: 5rem 2rem;
+    .about-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 300; color: #fff !important;
+      line-height: 1.08; margin-bottom: 1.6rem;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.75), 0 4px 32px rgba(0,0,0,0.55);
+      opacity: 0;
+      animation: about-fade-up 0.9s 0.6s ease forwards;
     }
+    .about-hero__title em {
+      font-style: italic;
+      color: #f5e8cc !important;
+    }
+
+    .about-hero__intro {
+      font-size: 1.05rem; font-weight: 300;
+      color: rgba(255,255,255,0.88);
+      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+      line-height: 1.85; max-width: 580px; margin: 0 auto;
+      opacity: 0;
+      animation: about-fade-up 0.9s 1s ease forwards;
+    }
+
+    @keyframes about-fade-up {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Story — two column with nature photo ── */
+    .about-story {
+      max-width: 1200px; margin: 0 auto;
+      padding: 6rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-story__text {}
+
     .about-story__eyebrow {
       font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
       color: var(--colour-taupe); margin-bottom: 0.6rem;
@@ -76,6 +129,141 @@
       margin-bottom: 1.4rem;
     }
     .about-story p:last-child { margin-bottom: 0; }
+
+    /* Pull quote */
+    .about-story__pull {
+      margin: 2rem 0;
+      padding: 1.6rem 0 1.6rem 1.8rem;
+      border-left: 3px solid var(--colour-sand);
+    }
+    .about-story__pull-text {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+      font-weight: 300; font-style: italic;
+      color: var(--colour-brown);
+      line-height: 1.45;
+    }
+
+    /* Team photo mosaic column */
+    .about-story__visual {
+      position: sticky;
+      top: 8rem;
+    }
+
+    .team-mosaic {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.4rem;
+      border-radius: 1.4rem;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(92,74,58,0.15);
+    }
+
+    /* Brand tile — top left */
+    .team-mosaic__brand {
+      aspect-ratio: 1 / 1;
+      background: var(--colour-brown);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    .team-mosaic__brand-name {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--colour-cream);
+      line-height: 1.25;
+    }
+
+    .team-mosaic__brand-sub {
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--colour-sand);
+    }
+
+    .team-mosaic__tile {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      background: var(--colour-warm-off);
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+    }
+
+    .team-mosaic__tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .team-mosaic__tile:hover img {
+      transform: scale(1.08);
+    }
+
+    .team-mosaic__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(92,74,58,0.75) 0%, transparent 55%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.6rem;
+    }
+
+    .team-mosaic__tile:hover .team-mosaic__overlay {
+      opacity: 1;
+    }
+
+    .team-mosaic__name {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .team-mosaic__placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, var(--colour-warm-off) 0%, rgba(143,169,140,0.15) 100%);
+      padding: 1rem;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .team-mosaic__tile:hover .team-mosaic__placeholder {
+      background: linear-gradient(135deg, rgba(201,185,154,0.3) 0%, rgba(143,169,140,0.25) 100%);
+    }
+
+    .team-mosaic__placeholder-name {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--colour-brown);
+      line-height: 1.2;
+    }
+
+    .team-mosaic__placeholder-cta {
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--colour-taupe);
+    }
 
     /* ── Values section ── */
     .about-values {
@@ -110,27 +298,53 @@
       gap: 1.5rem;
       max-width: 1000px; margin: 0 auto;
     }
-    @media (max-width: 860px) { .values-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 540px) { .values-grid { grid-template-columns: 1fr; } }
 
     .value-card {
       background: #fff;
       border: 1px solid rgba(158,136,114,0.15);
       border-radius: 1.2rem;
-      padding: 2rem 1.8rem;
-      transition: transform 0.3s, box-shadow 0.3s;
+      padding: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease, box-shadow 0.3s;
     }
-    .value-card:hover {
+    .value-card.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .value-card:nth-child(1) { transition-delay: 0s;    }
+    .value-card:nth-child(2) { transition-delay: 0.1s;  }
+    .value-card:nth-child(3) { transition-delay: 0.2s;  }
+    .value-card:nth-child(4) { transition-delay: 0.3s;  }
+    .value-card:nth-child(5) { transition-delay: 0.4s;  }
+    .value-card:nth-child(6) { transition-delay: 0.5s;  }
+    .value-card.is-visible:hover {
       transform: translateY(-5px);
       box-shadow: 0 16px 40px rgba(92,74,58,0.08);
     }
-    .value-card__icon {
-      font-size: 1.8rem; margin-bottom: 1rem;
-      display: block;
+    .value-card__photo {
+      width: 100%;
+      height: 160px;
+      overflow: hidden;
     }
+    .value-card__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .value-card:hover .value-card__photo img {
+      transform: scale(1.05);
+    }
+    .value-card__body {
+      padding: 1.6rem 1.8rem;
+    }
+    .value-card__icon { display: none; }
     .value-card__title {
       font-family: var(--font-display);
-      font-size: 1.2rem; font-weight: 500;
+      font-size: 1.4rem; font-weight: 500;
       color: var(--colour-brown); margin-bottom: 0.5rem;
     }
     .value-card__desc {
@@ -176,11 +390,27 @@
     }
     .about-accreditation__link:hover { color: var(--colour-brown); border-color: var(--colour-brown); }
 
-    /* ── CTA ── */
+    /* ── CTA — dark with nature texture overlay ── */
     .about-cta {
       background: var(--colour-brown);
       padding: 5rem 2rem;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('img/nature-band.webp');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+    .about-cta__inner {
+      position: relative;
+      z-index: 1;
     }
     .about-cta__title {
       font-family: var(--font-display);
@@ -206,6 +436,22 @@
       border-color: var(--colour-sand);
       color: var(--colour-cream);
     }
+
+    /* ── Responsive ── */
+    @media (max-width: 860px) {
+      .about-story { grid-template-columns: 1fr; gap: 2rem; }
+      .about-story__visual { position: static; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .team-mosaic { grid-template-columns: repeat(2, 1fr); }
+      .team-mosaic__brand:last-child,
+      .team-mosaic__tile:last-child { grid-column: span 2; }
+    }
+    @media (max-width: 540px) {
+      .values-grid { grid-template-columns: 1fr; }
+      .team-mosaic { grid-template-columns: repeat(2, 1fr); gap: 0.3rem; }
+      .team-mosaic__brand:last-child,
+      .team-mosaic__tile:last-child { grid-column: span 2; }
+    }
   </style>
 </head>
 
@@ -216,14 +462,16 @@
   <header role="banner">
     <nav class="nav" aria-label="Main navigation">
       <a href="/" class="nav__logo" aria-label="Counselling Camp, home">
-        <img src="img/logo.webp" alt="Counselling Camp" class="nav__logo-img" width="110" height="85" fetchpriority="high">
+        <img src="img/logo.webp" alt="Counselling Camp" class="nav__logo-img" width="622" height="457" fetchpriority="high">
       </a>
       <ul class="nav__links" role="list">
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#team">Our Team</a></li>
+        <li><a href="what-we-work-with/">What we help with</a></li>
+        <li><a href="how-we-work/">How we work</a></li>
+        <li><a href="team/">Our Team</a></li>
         <li><a href="about.html" aria-current="page">About Us</a></li>
-        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="guides/">Guides</a></li>
+          <li><a href="blog/">Blog</a></li>
         <li><a href="crisis.html">Crisis Support</a></li>
         <li><a href="faqs.html">FAQs</a></li>
         <li><a href="index.html#booking-heading" class="nav__cta">Book a Session</a></li>
@@ -241,23 +489,70 @@
 
   <main id="main-content">
 
-    <!-- Hero -->
-    <div class="about-hero" id="about-hero"></div>
+    <!-- Hero — full bleed photo -->
+    <div class="about-hero" id="about-hero">
+      <div class="about-hero__bg" aria-hidden="true"></div>
+      <div class="about-hero__overlay" aria-hidden="true"></div>
+      <div class="about-hero__content" id="about-hero-content">
+        <p class="about-hero__eyebrow">Who We Are</p>
+        <h1 class="about-hero__title">A collective built on <em>care</em></h1>
+        <p class="about-hero__intro">Counselling Camp began with a simple idea: that everyone deserves access to compassionate, professional mental health support — without the barriers that so often get in the way. We are a collective of independently practising counsellors who share a commitment to that idea, and to each other.</p>
+      </div>
+    </div>
 
-    <!-- Story -->
-    <div class="about-story reveal" id="about-story"></div>
+    <!-- Story — two column -->
+    <div class="about-story reveal" id="about-story">
+      <div class="about-story__text" id="about-story-text">
+        <p class="about-story__eyebrow">Our Story</p>
+        <h2 class="about-story__title">How we came <em>together</em></h2>
+        <p>Counselling Camp was founded in 2026 by a group of qualified counsellors based in Northeast England who wanted to make something different — not a clinic, not a corporation, but a community. A place where clients feel welcomed, not processed, and where counsellors can do their best work in an environment built on trust and mutual support.</p>
+        <blockquote class="about-story__pull"><p class="about-story__pull-text">"A place where clients feel welcomed, not processed."</p></blockquote>
+        <p>The name reflects our ethos. A camp is a place you come to for a while, a place that feels removed from the noise of everyday life. Somewhere you can breathe, reflect, and find your footing. That is what we aim to offer every person who walks through our door — or logs on from their living room.</p>
+        <p>Every counsellor in our collective is independently qualified, NCPS registered, and committed to ongoing professional development. We collaborate, supervise one another, and hold ourselves to the highest ethical standards — because your wellbeing depends on it.</p>
+      </div>
+      <div class="about-story__visual">
+        <div class="team-mosaic" id="about-team-mosaic"></div>
+      </div>
+    </div>
 
     <!-- Values -->
     <div class="about-values">
-      <div class="about-values__header reveal" id="about-values-header"></div>
-      <div class="values-grid" id="about-values-grid"></div>
+      <div class="about-values__header reveal" id="about-values-header">
+        <p class="about-values__eyebrow">What We Stand For</p>
+        <h2 class="about-values__title">Our <em>values</em></h2>
+      </div>
+      <div class="values-grid" id="about-values-grid">
+        <div class="value-card"><div class="value-card__photo"><img src="img/value-warmth.webp" alt="Genuine warmth" loading="lazy"></div><div class="value-card__body"><h3 class="value-card__title">Genuine warmth</h3><p class="value-card__desc">We believe the relationship between client and counsellor is the foundation of everything. You will always be met with kindness, not clinical distance.</p></div></div>
+        <div class="value-card"><div class="value-card__photo"><img src="img/value-confidentiality.webp" alt="Confidentiality" loading="lazy"></div><div class="value-card__body"><h3 class="value-card__title">Confidentiality</h3><p class="value-card__desc">What you share stays here. We follow the NCPS ethical framework and GDPR to the letter, so you can speak freely.</p></div></div>
+        <div class="value-card"><div class="value-card__photo"><img src="img/value-no-pressure.webp" alt="No pressure, ever" loading="lazy"></div><div class="value-card__body"><h3 class="value-card__title">No pressure, ever</h3><p class="value-card__desc">There is no agenda, no timetable, and no judgement. You move at your own pace, and we follow your lead.</p></div></div>
+        <div class="value-card"><div class="value-card__photo"><img src="img/value-guidance.webp" alt="Honest guidance" loading="lazy"></div><div class="value-card__body"><h3 class="value-card__title">Honest guidance</h3><p class="value-card__desc">We will be straight with you. If we think a different approach or a different counsellor would serve you better, we will say so.</p></div></div>
+        <div class="value-card"><div class="value-card__photo"><img src="img/value-learning.webp" alt="Accessibility" loading="lazy"></div><div class="value-card__body"><h3 class="value-card__title">Accessibility</h3><p class="value-card__desc">We offer in-person and online sessions to remove as many barriers to access as possible — geographical, physical, or otherwise.</p></div></div>
+        <div class="value-card"><div class="value-card__photo"><img src="img/value-learning.webp" alt="Continued learning" loading="lazy"></div><div class="value-card__body"><h3 class="value-card__title">Continued learning</h3><p class="value-card__desc">Every one of our counsellors commits to ongoing training, supervision, and reflective practice. We never stop developing.</p></div></div>
+      </div>
     </div>
 
     <!-- Accreditation -->
-    <div class="about-accreditation reveal" id="about-accreditation"></div>
+    <div class="about-accreditation reveal" id="about-accreditation">
+      <p class="about-accreditation__eyebrow">Professional Standards</p>
+      <h2 class="about-accreditation__title">Registered &amp; <em>accountable</em></h2>
+      <p class="about-accreditation__body">All of our counsellors are registered members of the <strong>National Counselling &amp; Psychotherapy Society (NCPS)</strong> — one of the leading professional bodies for counsellors in the UK. NCPS membership means we are bound by a strict code of ethics, hold appropriate insurance, and engage in regular clinical supervision. You can verify any of our counsellors on the NCPS register.</p>
+      <a href="https://ncps.com/find-a-counsellor/search-the-directory" class="about-accreditation__link" target="_blank" rel="noopener noreferrer">
+        View the NCPS register
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 7h10M8 4l4 3-4 3"/></svg>
+      </a>
+    </div>
 
-    <!-- CTA -->
-    <div class="about-cta" id="about-cta"></div>
+    <!-- CTA — nature texture -->
+    <div class="about-cta" id="about-cta">
+      <div class="about-cta__inner" id="about-cta-inner">
+        <h2 class="about-cta__title">Ready to take the first <em>step</em>?</h2>
+        <p class="about-cta__body">A free consultation costs nothing and commits you to nothing. It is simply a conversation — a chance to see if we feel like a good fit.</p>
+        <div class="about-cta__buttons">
+          <a href="index.html#booking" class="btn btn--outline">Book a Free Consultation</a>
+          <a href="team/" class="btn btn--outline">Meet our counsellors</a>
+        </div>
+      </div>
+    </div>
 
   </main>
 
@@ -270,15 +565,24 @@
         <p class="footer__tagline">A collective of qualified, compassionate counsellors offering a safe, confidential space for growth and healing.</p>
       </div>
 
-      <nav class="footer__col" aria-label="Services">
-        <p class="footer__col-title">Services</p>
+                  <nav class="footer__col" aria-label="What we help with">
+        <p class="footer__col-title">What we help with</p>
         <ul role="list">
-          <li><a href="index.html#services">Individual Therapy</a></li>
-          <li><a href="index.html#services">Men's Mental Health</a></li>
-          <li><a href="index.html#services">Neurodivergent Support</a></li>
-          <li><a href="index.html#services">Online Sessions</a></li>
-          <li><a href="index.html#services">Anxiety &amp; Stress</a></li>
-          <li><a href="index.html#services">Grief &amp; Loss</a></li>
+          <li><a href="what-we-work-with/anxiety-stress.html">Anxiety and Stress</a></li>
+          <li><a href="what-we-work-with/depression.html">Depression</a></li>
+          <li><a href="what-we-work-with/grief-loss.html">Grief and Loss</a></li>
+          <li><a href="what-we-work-with/trauma.html">Trauma</a></li>
+          <li><a href="what-we-work-with/mens-mental-health.html">Men's Mental Health</a></li>
+          <li><a href="what-we-work-with/neurodivergent-support.html">Neurodivergent Support</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__col" aria-label="How we work">
+        <p class="footer__col-title">How we work</p>
+        <ul role="list">
+          <li><a href="how-we-work/face-to-face.html">Face-to-Face Counselling</a></li>
+          <li><a href="how-we-work/online-counselling.html">Online Counselling</a></li>
+          <li><a href="how-we-work/telephone.html">Telephone Counselling</a></li>
+          <li><a href="how-we-work/walk-and-talk.html">Walk and Talk Therapy</a></li>
         </ul>
       </nav>
 
@@ -288,7 +592,8 @@
           <li><a href="about.html" aria-current="page">About Us</a></li>
           <li><a href="index.html#approach">Our Approach</a></li>
           <li><a href="faqs.html">FAQs</a></li>
-          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="guides/">Guides</a></li>
+          <li><a href="blog/">Blog</a></li>
           <li><a href="crisis.html">Crisis Support</a></li>
           <li><a href="privacy.html">Privacy &amp; Confidentiality</a></li>
           <li><a href="privacy.html#cookies">Cookie Policy</a></li>
@@ -304,82 +609,62 @@
     </div>
   </footer>
 
+  <button class="back-to-top" aria-label="Back to top" id="back-to-top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="content/team.js"></script>
   <script src="content/about.js"></script>
   <script src="js/main.js"></script>
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    /* ── Render hero ── */
-    document.getElementById('about-hero').innerHTML = `
-      <p class="about-hero__eyebrow">${ABOUT.hero.eyebrow}</p>
-      <h1 class="about-hero__title">${ABOUT.hero.title}</h1>
-      <p class="about-hero__intro">${ABOUT.hero.intro}</p>
-    `;
+    /* ── Team photo mosaic — needs TEAM data, gracefully skipped if JS off ── */
+    (function() {
+      const mosaic = document.getElementById('about-team-mosaic');
+      if (!mosaic || typeof TEAM === 'undefined') return;
 
-    /* ── Render story ── */
-    document.getElementById('about-story').innerHTML = `
-      <p class="about-story__eyebrow">${ABOUT.story.eyebrow}</p>
-      <h2 class="about-story__title">${ABOUT.story.title}</h2>
-      ${ABOUT.story.paragraphs.map(p => `<p>${p}</p>`).join('')}
-    `;
+      const brandTile = '<div class="team-mosaic__brand"><span class="team-mosaic__brand-name">Counselling<br>Camp</span><span class="team-mosaic__brand-sub">Northeast England</span></div>';
 
-    /* ── Render values header ── */
-    document.getElementById('about-values-header').innerHTML = `
-      <p class="about-values__eyebrow">${ABOUT.values.eyebrow}</p>
-      <h2 class="about-values__title">${ABOUT.values.title}</h2>
-    `;
+      const counsellorTiles = TEAM.map(function(person) {
+        if (person.photo) {
+          return '<a href="team/' + person.slug + '.html" class="team-mosaic__tile" aria-label="Meet ' + person.name + '"><img src="' + person.photo + '" alt="' + person.name + '" loading="lazy" style="object-position:' + (person.photoPosition || 'center 20%') + '"><div class="team-mosaic__overlay"><span class="team-mosaic__name">' + person.name + '</span></div></a>';
+        } else {
+          return '<a href="team/' + person.slug + '.html" class="team-mosaic__tile" aria-label="Meet ' + person.name + '"><div class="team-mosaic__placeholder"><span class="team-mosaic__placeholder-name">' + person.name + '</span><span class="team-mosaic__placeholder-cta">View profile</span></div></a>';
+        }
+      }).join('');
 
-    /* ── Render value cards ── */
-    document.getElementById('about-values-grid').innerHTML =
-      ABOUT.values.items.map(v => `
-        <div class="value-card reveal">
-          <span class="value-card__icon" aria-hidden="true">${v.icon}</span>
-          <h3 class="value-card__title">${v.title}</h3>
-          <p class="value-card__desc">${v.desc}</p>
-        </div>
-      `).join('');
+      mosaic.innerHTML = brandTile + counsellorTiles + brandTile;
+    })();
 
-    /* ── Render accreditation ── */
-    document.getElementById('about-accreditation').innerHTML = `
-      <p class="about-accreditation__eyebrow">${ABOUT.accreditation.eyebrow}</p>
-      <h2 class="about-accreditation__title">${ABOUT.accreditation.title}</h2>
-      <p class="about-accreditation__body">${ABOUT.accreditation.body}</p>
-      <a href="${ABOUT.accreditation.linkHref}" class="about-accreditation__link"
-         target="_blank" rel="noopener noreferrer">
-        ${ABOUT.accreditation.linkText}
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 7h10M8 4l4 3-4 3"/></svg>
-      </a>
-    `;
+    /* ── Stagger value cards on scroll ── */
+    const valueCards = document.querySelectorAll('.value-card');
+    const cardObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        cardObs.unobserve(entry.target);
+      });
+    }, { threshold: 0.1 });
+    valueCards.forEach(c => cardObs.observe(c));
 
-    /* ── Render CTA ── */
-    document.getElementById('about-cta').innerHTML = `
-      <h2 class="about-cta__title">${ABOUT.cta.title}</h2>
-      <p class="about-cta__body">${ABOUT.cta.body}</p>
-      <div class="about-cta__buttons">
-        <a href="${ABOUT.cta.primaryHref}" class="btn btn--outline">${ABOUT.cta.primaryText}</a>
-        <a href="${ABOUT.cta.secondaryHref}" class="btn btn--outline">${ABOUT.cta.secondaryText}</a>
-      </div>
-    `;
-
-    /* Re-trigger scroll reveal for dynamically rendered cards */
-    if (typeof initScrollReveal === 'function') {
-      initScrollReveal();
-    } else {
-      /* Fallback: run reveal inline if main.js already ran */
-      const revealEls = document.querySelectorAll('.reveal');
-      const obs = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const siblings = [...entry.target.parentElement.querySelectorAll('.reveal')];
-          const idx = siblings.indexOf(entry.target);
-          entry.target.style.transitionDelay = idx * 0.1 + 's';
-          entry.target.classList.add('is-visible');
-          obs.unobserve(entry.target);
-        });
-      }, { threshold: 0.12 });
-      revealEls.forEach(el => obs.observe(el));
-    }
+    /* ── Scroll reveal for other sections ── */
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const siblings = [...entry.target.parentElement.querySelectorAll('.reveal')];
+        const idx = siblings.indexOf(entry.target);
+        entry.target.style.transitionDelay = idx * 0.1 + 's';
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => obs.observe(el));
   </script>
 
+  <script src="js/accessibility.js"></script>
 </body>
 </html>

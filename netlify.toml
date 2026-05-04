@@ -1,0 +1,26 @@
+# Netlify configuration — pretty URL redirects only
+
+[[redirects]]
+  from = "/guides/:slug"
+  to = "/guides/:slug.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/:slug"
+  to = "/blog/:slug.html"
+  status = 200
+
+[[redirects]]
+  from = "/what-we-work-with/:slug"
+  to = "/what-we-work-with/:slug.html"
+  status = 200
+
+[[redirects]]
+  from = "/how-we-work/:slug"
+  to = "/how-we-work/:slug.html"
+  status = 200
+
+[[redirects]]
+  from = "/team/:slug"
+  to = "/team/:slug.html"
+  status = 200
